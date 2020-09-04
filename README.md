@@ -1,7 +1,7 @@
-# NomedoProjeto
+# Software Curriculum
 
 **Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Conteúdo da Disciplina**: Grafos 1<br>
 
 ## Alunos
 |Matrícula | Aluno |
@@ -10,14 +10,14 @@
 | 17/0045943  |  Thallys Silva Braz |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Descrever a topologia do currículo de Engenharia de Software de forma a facilitar a organização dos alunos em relação aos pre-requisitos de todos os cursos envolvendo essa graduação.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
+**Linguagem**: JavaScript<br>
+**Framework**: React<br>
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
 ## Uso 
