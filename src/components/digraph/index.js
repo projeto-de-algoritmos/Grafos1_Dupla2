@@ -27,7 +27,7 @@ const Graph = () => {
         }
 
       } 
-      
+
       // Changes type to completed and adds to completed array
       else if (updatedNode.type === "notCompleted") {
         updatedNode.type = "completed";
@@ -42,7 +42,10 @@ const Graph = () => {
         const nodeIndex = completed.findIndex(node => node.id === updatedNode.id);
         completed.splice(nodeIndex, 1);
       }
-      console.log(completed);
+
+
+      // Implementar BFS para atualizar o tipo de todos os nós
+
 
       setNodes({...nodes, updatedNode});
     }
