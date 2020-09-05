@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { GraphView } from 'react-digraph';
 
 import data from '../../graphData';
@@ -10,21 +10,33 @@ const Graph = () => {
   const graphRef = useRef();
 
   const [nodes, setNodes] = useState(data.nodes);
-  // const [completed, setCompleted] = useState();
-
-  // useEffect(() => {
-  //   const completedNodes = nodes.filter(node => node.type === "completed");
-
-  //   setCompleted(completedNodes);
-  // }, [nodes]);
+  
+  const completed = [];
 
   function handleClick(selectedNode) {
     let updatedNode = selectedNode;
 
     if(updatedNode !== null){
+      // Checks if all requirements are completed
+      if(updatedNode.type === 'missing'){
+        const requirementsFullFilled = updatedNode.requirements.every(i => completed.includes(i));
+        if (requirementsFullFilled){
+          updatedNode.type = "completed";
+          completed.push(updatedNode.id);
+        }
+      }
+
+
+
+
+
+
+
       updatedNode.type = updatedNode.type === "notCompleted" ? "completed" : "notCompleted";
 
       setNodes({...nodes, updatedNode});
+
+      console.log(nodes);
     }
   }
 
