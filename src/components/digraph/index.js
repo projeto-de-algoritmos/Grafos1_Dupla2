@@ -6,12 +6,12 @@ import GraphConfig from '../../utils/GraphConfig';
 
 import { Container } from './styles';
 
+let completed = [];
+
 const Graph = () => {
   const graphRef = useRef();
 
-  const [nodes, setNodes] = useState(data.nodes);
-  
-  const completed = [];
+  const [nodes, setNodes] = useState(data.nodes);  
 
   function handleClick(selectedNode) {
     let updatedNode = selectedNode;
@@ -19,24 +19,32 @@ const Graph = () => {
     if(updatedNode !== null){
       // Checks if all requirements are completed
       if(updatedNode.type === 'missing'){
-        const requirementsFullFilled = updatedNode.requirements.every(i => completed.includes(i));
+        const requirementsFullFilled = updatedNode.requirements.every(id => completed.includes(id));
+
         if (requirementsFullFilled){
           updatedNode.type = "completed";
           completed.push(updatedNode.id);
         }
+
+      } 
+      
+      // Changes type to completed and adds to completed array
+      else if (updatedNode.type === "notCompleted") {
+        updatedNode.type = "completed";
+        
+        completed.push(updatedNode.id);
+      } 
+
+      // Removes from completed array and changes type to notCompleted
+      else {
+        updatedNode.type = "notCompleted";
+        
+        const nodeIndex = completed.findIndex(node => node.id === updatedNode.id);
+        completed.splice(nodeIndex, 1);
       }
-
-
-
-
-
-
-
-      updatedNode.type = updatedNode.type === "notCompleted" ? "completed" : "notCompleted";
+      console.log(completed);
 
       setNodes({...nodes, updatedNode});
-
-      console.log(nodes);
     }
   }
 
