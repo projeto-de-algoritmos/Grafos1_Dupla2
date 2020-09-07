@@ -12,6 +12,12 @@
 ## Sobre 
 Descrever a topologia do currículo de Engenharia de Software de forma a facilitar a organização dos alunos em relação aos pre-requisitos de todos os cursos envolvendo essa graduação.
 
+## Demo online
+
+Fizemos o deploy da aplicação para o netlify para facilitar o uso sem precisar instalar nada na máquina do usuário.
+
+**Link para a demo:** https://softwarecurriculumfga.netlify.app/
+
 ---
 
 ## Screenshots
