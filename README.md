@@ -12,19 +12,44 @@
 ## Sobre 
 Descrever a topologia do currículo de Engenharia de Software de forma a facilitar a organização dos alunos em relação aos pre-requisitos de todos os cursos envolvendo essa graduação.
 
+---
+
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+<p align="center">
+ <img src="https://github.com/projeto-de-algoritmos/Grafos1_SoftwareCurriculum/blob/master/images/grafos1_1.png" alt="Software Curriculum" /> 
+ <img src="https://github.com/projeto-de-algoritmos/Grafos1_SoftwareCurriculum/blob/master/images/grafos1_2.png"  alt="Software Curriculum" />
+ <img src="https://github.com/projeto-de-algoritmos/Grafos1_SoftwareCurriculum/blob/master/images/grafos1_3.png"  alt="Software Curriculum" />
+</p>
+
+---
 
 ## Instalação 
 **Linguagem**: JavaScript<br>
 **Framework**: React<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Lib**: Digraph
 
+Primeiro de tudo é necessário ter o NodeJS instalado e o Yarn.
+
+Depois, clone a aplicação. No terminal digite:
+```git clone https://github.com/projeto-de-algoritmos/Grafos1_SoftwareCurriculum.git``` 
+
+Entre na pasta da aplicação e execute os seguintes comandos no terminal:
+1. ```yarn``` (Instala todas as dependências necessárias)
+2. ```yarn start``` (Executa a aplicação)
+
+---
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+A aplicação representa todas as disciplinas obrigatórias que devemos cursar na graduação de Eng. de Software.
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+As disciplinas com fundo **branco** significam disciplinas que **não foram completadas** ainda.
+
+As de fundo **verde** significam que **já foram completadas**.
+
+E as de fundo **vermelho** significam que **ainda não podem ser feitas** pois falta alguma outra disciplina que é requisito.
+
+Ao clicar no nó da disciplina, você consegue alterar o estado dela entre as três opções explicadas acima.
+
 
 
 
