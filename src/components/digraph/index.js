@@ -61,7 +61,7 @@ const Graph = () => {
         nodeTypes={GraphConfig.NodeTypes}
         nodeSubtypes={GraphConfig.NodeSubtypes}
         edgeTypes={GraphConfig.EdgeTypes}
-        readOnly={true}
+        readOnly={false}
         onSelectNode={handleClick}
       />
     </Container>

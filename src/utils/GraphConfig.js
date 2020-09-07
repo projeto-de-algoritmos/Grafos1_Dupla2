@@ -3,7 +3,7 @@ import React from 'react';
 const GraphConfig =  {
   NodeTypes: {
     notCompleted: { // required to show empty nodes
-      typeText: "None",
+      typeText: "Obrigatória",
       shapeId: "#notCompleted", // relates to the type property of a node
       shape: (
         <symbol viewBox="0 0 100 100" id="notCompleted" key="0">
@@ -12,7 +12,7 @@ const GraphConfig =  {
       ) 
     },
     completed: { // required to show empty nodes
-      typeText: "None",
+      typeText: "Obrigatória",
       shapeId: "#completed", // relates to the type property of a node
       shape: (
         <symbol viewBox="0 0 100 100" id="completed" key="0">
@@ -21,7 +21,7 @@ const GraphConfig =  {
       ) 
     },
     missing: { // required to show empty nodes
-      typeText: "None",
+      typeText: "Obrigatória",
       shapeId: "#missing", // relates to the type property of a node
       shape: (
         <symbol viewBox="0 0 100 100" id="missing" key="0">
