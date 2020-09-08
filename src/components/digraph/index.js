@@ -59,8 +59,8 @@ class Graph extends Component {
         } else if (!node.requirements.every(id => completed.includes(id))){
           node.type = "missing";
         }
-        return node;  
       }  
+      return node;
     });
   }
 
