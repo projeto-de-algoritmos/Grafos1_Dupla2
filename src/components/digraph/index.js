@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { Component } from 'react';
 import { GraphView } from 'react-digraph';
 
 import data from '../../graphData';
@@ -8,12 +8,20 @@ import { Container } from './styles';
 
 let completed = [];
 
-const Graph = () => {
-  const graphRef = useRef();
+const NODE_KEY = "id" 
 
-  const [nodes, setNodes] = useState(data.nodes);  
+class Graph extends Component {
 
-  function handleClick(selectedNode) {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+    
+    this.state = {
+      graph: data,
+    }
+  }
+
+  handleClick(selectedNode) {
     let updatedNode = selectedNode;
 
     if(updatedNode !== null){
@@ -42,30 +50,42 @@ const Graph = () => {
         const nodeIndex = completed.findIndex(node => node.id === updatedNode.id);
         completed.splice(nodeIndex, 1);
       }
-
-
-      // Implementar BFS para atualizar o tipo de todos os nós
-
-
-      setNodes({...nodes, updatedNode});
     }
+    
+    this.state.graph.nodes.map(node => {
+      if(node.requirements){
+        if(node.requirements.every(id => completed.includes(id)) && node.type === "missing"){
+          node.type = "notCompleted";
+        } else if (!node.requirements.every(id => completed.includes(id))){
+          node.type = "missing";
+        }
+        return node;  
+      }  
+    });
   }
 
-  return (
-    <Container>
-      <GraphView  
-        ref={graphRef}
-        nodeKey={"id"}
-        nodes={nodes}
-        edges={data.edges}
-        nodeTypes={GraphConfig.NodeTypes}
-        nodeSubtypes={GraphConfig.NodeSubtypes}
-        edgeTypes={GraphConfig.EdgeTypes}
-        readOnly={false}
-        onSelectNode={handleClick}
-      />
-    </Container>
-  );
+  render() {
+
+    const NodeTypes = GraphConfig.NodeTypes;
+    const NodeSubtypes = GraphConfig.NodeSubtypes;
+    const EdgeTypes = GraphConfig.EdgeTypes;
+
+    return (
+      <Container>
+        <GraphView  
+          ref='GraphView'
+          nodeKey={NODE_KEY}
+          nodes={this.state.graph.nodes}
+          edges={this.state.graph.edges}
+          nodeTypes={NodeTypes}
+          nodeSubtypes={NodeSubtypes}
+          edgeTypes={EdgeTypes}
+          readOnly={false}
+          onSelectNode={this.handleClick}
+        />
+      </Container>
+    );
+  }
 }
 
 export default Graph;
