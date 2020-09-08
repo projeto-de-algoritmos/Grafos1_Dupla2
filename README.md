@@ -12,6 +12,8 @@
 ## Sobre 
 Descrever a topologia do currículo de Engenharia de Software de forma a facilitar a organização dos alunos em relação aos pre-requisitos de todos os cursos envolvendo essa graduação.
 
+**Vídeo explicando sobre o projeto se encontra na pasta assets no repositório**
+
 ## Demo online
 
 Fizemos o deploy da aplicação para o netlify para facilitar o uso sem precisar instalar nada na máquina do usuário.
@@ -23,9 +25,9 @@ Fizemos o deploy da aplicação para o netlify para facilitar o uso sem precisar
 ## Screenshots
 
 <p align="center">
- <img src="https://github.com/projeto-de-algoritmos/Grafos1_SoftwareCurriculum/blob/master/images/grafos1_1.png" alt="Software Curriculum" /> 
- <img src="https://github.com/projeto-de-algoritmos/Grafos1_SoftwareCurriculum/blob/master/images/grafos1_2.png"  alt="Software Curriculum" />
- <img src="https://github.com/projeto-de-algoritmos/Grafos1_SoftwareCurriculum/blob/master/images/grafos1_3.png"  alt="Software Curriculum" />
+ <img src="https://github.com/projeto-de-algoritmos/Grafos1_SoftwareCurriculum/blob/master/assets/grafos1_1.png" alt="Software Curriculum" /> 
+ <img src="https://github.com/projeto-de-algoritmos/Grafos1_SoftwareCurriculum/blob/master/assets/grafos1_2.png"  alt="Software Curriculum" />
+ <img src="https://github.com/projeto-de-algoritmos/Grafos1_SoftwareCurriculum/blob/master/assets/grafos1_3.png"  alt="Software Curriculum" />
 </p>
 
 ---
